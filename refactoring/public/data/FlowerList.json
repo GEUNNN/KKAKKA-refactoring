@@ -1,0 +1,136 @@
+{
+  "result": [
+    {
+      "created_at": "2020-03-21T23:07:03.304",
+      "detail": "핑크빛 분위기의 완성",
+      "discount_rate": 0.1,
+      "discounted_price": "53900",
+      "id": 1,
+      "image": "https://user-images.githubusercontent.com/46774456/112266898-032bb800-8cb8-11eb-8faa-115276adc745.png",
+      "name": "폴인로즈 에디션",
+      "orign_price": "59900",
+      "size": "L"
+    },
+    {
+      "created_at": "2020-07-21T23:09:07.480",
+      "detail": "마음을 간질이는 설렘",
+      "discount_rate": 0.0,
+      "discounted_price": "0",
+      "id": 2,
+      "image": "https://user-images.githubusercontent.com/46774456/112266905-058e1200-8cb8-11eb-80aa-ae807a1b3bed.png",
+      "name": "로맨틱 아네모네 에디션",
+      "orign_price": "42900",
+      "size": "L"
+    },
+    {
+      "created_at": "2020-10-21T23:11:24.363",
+      "detail": "알록달록한 매력",
+      "discount_rate": 0.1,
+      "discounted_price": "29900",
+      "id": 3,
+      "image": "https://user-images.githubusercontent.com/46774456/112266909-0757d580-8cb8-11eb-8306-8da6ac54d897.png",
+      "name": "솜사탕 로즈 에디션",
+      "orign_price": "33900",
+      "size": "L"
+    },
+    {
+      "created_at": "2020-5-20T23:07:03.304",
+      "detail": "핑크빛 분위기의 완성",
+      "discount_rate": 0.1,
+      "discounted_price": "53900",
+      "id": 1,
+      "image": "https://user-images.githubusercontent.com/46774456/112266913-08890280-8cb8-11eb-8b4c-c5c8583229ee.png",
+      "name": "폴인로즈 에디션",
+      "orign_price": "59900",
+      "size": "L"
+    },
+    {
+      "created_at": "2020-01-21T23:09:07.480",
+      "detail": "마음을 간질이는 설렘",
+      "discount_rate": 0.0,
+      "discounted_price": "0",
+      "id": 2,
+      "image": "https://user-images.githubusercontent.com/46774456/112266905-058e1200-8cb8-11eb-80aa-ae807a1b3bed.png",
+      "name": "로맨틱 아네모네 에디션",
+      "orign_price": "42900",
+      "size": "S"
+    },
+    {
+      "created_at": "2020-02-22T23:11:24.363",
+      "detail": "알록달록한 매력",
+      "discount_rate": 0.1,
+      "discounted_price": "29900",
+      "id": 3,
+      "image": "https://user-images.githubusercontent.com/46774456/112266909-0757d580-8cb8-11eb-8306-8da6ac54d897.png",
+      "name": "솜사탕 로즈 에디션",
+      "orign_price": "33900",
+      "size": "M"
+    },
+    {
+      "created_at": "2020-04-21T23:07:03.304",
+      "detail": "핑크빛 분위기의 완성",
+      "discount_rate": 0.1,
+      "discounted_price": "53900",
+      "id": 1,
+      "image": "https://user-images.githubusercontent.com/46774456/112266913-08890280-8cb8-11eb-8b4c-c5c8583229ee.png",
+      "name": "폴인로즈 에디션",
+      "orign_price": "59900",
+      "size": "M"
+    },
+    {
+      "created_at": "2020-11-21T23:09:07.480",
+      "detail": "마음을 간질이는 설렘",
+      "discount_rate": 0.0,
+      "discounted_price": "0",
+      "id": 2,
+      "image": "https://user-images.githubusercontent.com/46774456/112266905-058e1200-8cb8-11eb-80aa-ae807a1b3bed.png",
+      "name": "로맨틱 아네모네 에디션",
+      "orign_price": "42900",
+      "size": "M"
+    },
+    {
+      "created_at": "2020-03-21T23:11:24.363",
+      "detail": "알록달록한 매력",
+      "discount_rate": 0.1,
+      "discounted_price": "29900",
+      "id": 3,
+      "image": "https://user-images.githubusercontent.com/46774456/112266898-032bb800-8cb8-11eb-8faa-115276adc745.png",
+      "name": "솜사탕 로즈 에디션",
+      "orign_price": "33900",
+      "size": "M"
+    },
+    {
+      "created_at": "2020-01-21T23:09:07.480",
+      "detail": "마음을 간질이는 설렘",
+      "discount_rate": 0.0,
+      "discounted_price": "0",
+      "id": 2,
+      "image": "https://user-images.githubusercontent.com/46774456/112266905-058e1200-8cb8-11eb-80aa-ae807a1b3bed.png",
+      "name": "로맨틱 아네모네 에디션",
+      "orign_price": "42900",
+      "size": "S"
+    },
+    {
+      "created_at": "2020-02-22T23:11:24.363",
+      "detail": "알록달록한 매력",
+      "discount_rate": 0.1,
+      "discounted_price": "29900",
+      "id": 3,
+      "image": "https://user-images.githubusercontent.com/46774456/112266909-0757d580-8cb8-11eb-8306-8da6ac54d897.png",
+      "name": "솜사탕 로즈 에디션",
+      "orign_price": "33900",
+      "size": "M"
+    },
+    {
+      "created_at": "2020-04-21T23:07:03.304",
+      "detail": "핑크빛 분위기의 완성",
+      "discount_rate": 0.1,
+      "discounted_price": "53900",
+      "id": 1,
+      "image": "https://user-images.githubusercontent.com/46774456/112266913-08890280-8cb8-11eb-8b4c-c5c8583229ee.png",
+      "name": "폴인로즈 에디션",
+      "orign_price": "59900",
+      "size": "M"
+    }
+  ]
+}

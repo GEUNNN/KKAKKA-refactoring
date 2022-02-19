@@ -1,0 +1,103 @@
+@mixin title {
+  font-size: 26px;
+  line-height: 38px;
+  font-weight: 500;
+  letter-spacing: -0.39px;
+  color: #222;
+}
+
+@mixin subTitle {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 100;
+  letter-spacing: -0.24px;
+  color: #787878;
+}
+
+@mixin strong {
+  font-weight: 700;
+}
+
+.detailTitle {
+  margin-bottom: 10px;
+
+  .subTitle {
+    @include subTitle();
+  }
+
+  .price::after {
+    content: "원";
+  }
+
+  .titleBox {
+    display: flex;
+    align-items: center;
+
+    .title {
+      @include title();
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    .strong {
+      @include strong();
+    }
+
+    .sizeBox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 32px;
+      height: 32px;
+      background-color: #ffcd32;
+      border-radius: 50%;
+      margin: 0 10px 10px;
+
+      .detailSize {
+        font-weight: 600;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .subTitle {
+    display: inline-block;
+  }
+
+  .detailDiscount {
+    @include subTitle();
+
+    .discountPer {
+      font-weight: 700;
+      color: #ff4e50;
+
+      &::after {
+        content: "%";
+        padding-right: 6px;
+      }
+    }
+
+    .oldPrice {
+      margin-right: 10px;
+      text-decoration: line-through;
+
+      &::after {
+        content: "원";
+      }
+    }
+
+    .title {
+      @include title();
+      display: inline-block;
+      font-size: 26px;
+      line-height: 38px;
+      font-weight: 500;
+      letter-spacing: -0.39px;
+      color: #222;
+    }
+
+    .price::after {
+      content: "원";
+    }
+  }
+}

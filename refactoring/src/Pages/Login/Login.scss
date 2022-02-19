@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+
+%btn-setting {
+  height: 48px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+%input-setting {
+  height: 44px;
+  padding: 0 20px;
+  border: #d3d3d3 1px solid;
+  border-radius: 5px;
+  font-weight: 300;
+  color: #222;
+  outline: none;
+  &:focus {
+    border: 1px solid #ffcd32;
+  }
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+
+  .loginBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    padding: 100px 0;
+
+    .loginText {
+      text-align: center;
+      margin: 10px;
+      color: #222;
+      font-family: "Noto Sans KR";
+      font-size: 25px;
+      font-weight: 900;
+    }
+
+    .loginField {
+      display: flex;
+      flex-direction: column;
+      width: 400px;
+      padding: 20px;
+
+      .inputBtnBuffer {
+        height: 40px;
+      }
+
+      .id {
+        @extend %input-setting;
+        margin-bottom: 10px;
+      }
+
+      .pwd {
+        @extend %input-setting;
+      }
+
+      .validation {
+        margin-top: 15px;
+        padding-left: 20px;
+        font-family: "Noto Sans KR";
+        font-size: 13px;
+        color: #ff4e50;
+      }
+
+      .loginBtn {
+        @extend %btn-setting;
+        background-color: #ffcd32;
+        color: #1b1b1b;
+        border: #ffcd32 1px solid;
+        margin-bottom: 20px;
+      }
+
+      .signUpArea {
+        display: flex;
+        flex-direction: column;
+        border-top: #ececec 1px solid;
+        padding-top: 20px;
+
+        .signUpBtn {
+          @extend %btn-setting;
+          background-color: #ececec;
+
+          .signUpLink {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}

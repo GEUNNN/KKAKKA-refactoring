@@ -1,0 +1,47 @@
+.flowerListMain {
+  padding: 50px 20% 100px 20%;
+
+  .sortButton {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 10px 0 10px 0;
+    // margin: 5px;
+  }
+
+  .startLowPrice,
+  .startHighPrice,
+  .startBrandnew {
+    margin: 4px;
+    padding: 4px 6px;
+    border: 1px solid #ffd232;
+    border-radius: 4px;
+    background-color: #fff;
+    font-weight: 500;
+    font-size: 10px;
+    color: #868e96;
+  }
+
+  .startLowPrice:hover,
+  .startHighPrice:hover,
+  .startBrandnew:hover {
+    background-color: #ffd232;
+    border-radius: 4px;
+    text-align: center;
+    color: #222;
+  }
+  .startLowPrice:focus,
+  .startHighPrice:focus,
+  .startBrandnew:focus {
+    background-color: #ffd232;
+    border-radius: 4px;
+    text-align: center;
+    color: #222;
+  }
+
+  .list {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 15px;
+  }
+}

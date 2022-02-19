@@ -1,0 +1,91 @@
+%title {
+  font-size: 26px;
+  line-height: 38px;
+  font-weight: 500;
+  letter-spacing: -0.39px;
+  color: #222;
+}
+
+%sub-title {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  letter-spacing: -0.24px;
+  color: #222;
+}
+
+%strong {
+  font-weight: 700;
+}
+
+.subStart {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 50px 0;
+
+  .title {
+    @extend %title;
+    margin-bottom: 60px;
+  }
+
+  ol {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+
+    .subSteplist {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 30px;
+
+      &:not(:last-child) {
+        border-right: 1px solid #ececec;
+      }
+
+      .steplistImg {
+        display: block;
+        width: auto;
+        padding: 0 35px;
+        margin-bottom: 20px;
+      }
+
+      .subStep {
+        width: 180px;
+        height: 180px;
+      }
+
+      .stepNum {
+        @extend %strong;
+        margin-bottom: 8px;
+        color: #ffcd32;
+      }
+
+      span {
+        @extend %sub-title;
+        text-align: center;
+
+        strong {
+          @extend %strong;
+        }
+      }
+    }
+  }
+
+  .subTip {
+    display: flex;
+    justify-content: center;
+    width: 940px;
+    padding: 30px;
+    background-color: #ececec;
+  }
+}

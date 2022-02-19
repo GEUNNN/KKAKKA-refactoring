@@ -1,0 +1,32 @@
+{
+  "result": [
+    {
+      "name": "가벼운 S 쿠키 구독",
+      "introduction": "쿠키가 일상이 되는 가벼운 시작",
+      "image": "https://user-images.githubusercontent.com/46774456/112266919-0a52c600-8cb8-11eb-8a85-5de741af335c.png",
+      "price": "33900",
+      "id": "1"
+    },
+    {
+      "name": "가득찬 M 쿠키 구독",
+      "introduction": "꽃이 일상이 되는 가벼운 시작",
+      "image": "https://user-images.githubusercontent.com/46774456/112266972-19397880-8cb8-11eb-9a88-200e3594b9b3.png",
+      "price": "33900",
+      "id": "2"
+    },
+    {
+      "name": "딱 좋은 L 쿠키 구독",
+      "introduction": "꽃이 일상이 되는 가벼운 시작",
+      "image": "https://user-images.githubusercontent.com/46774456/112266922-0b83f300-8cb8-11eb-9e4c-2fa60755b834.png",
+      "price": "33900",
+      "id": "3"
+    },
+    {
+      "name": "풍성한 XL 쿠키 구독",
+      "introduction": "꽃이 일상이 되는 가벼운 시작",
+      "image": "https://user-images.githubusercontent.com/46774456/112266968-18084b80-8cb8-11eb-96b9-28081398e8ef.png",
+      "price": "33900",
+      "id": "4"
+    }
+  ]
+}

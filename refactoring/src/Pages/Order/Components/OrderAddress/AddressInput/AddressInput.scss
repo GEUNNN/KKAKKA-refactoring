@@ -1,0 +1,85 @@
+.addInputContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+
+  #formOrder {
+    display: block;
+    padding: 20px 0 0 12px;
+
+    .optionTh1 {
+      width: 134px;
+      min-height: 28px;
+      margin-top: 16px;
+    }
+
+    tr {
+      width: 594px;
+      height: 44px;
+      text-align: left;
+
+      .title {
+        color: #626262;
+        font-size: 16px;
+        font-weight: 400;
+      }
+      .contents {
+        width: 460px;
+        height: 28px;
+        margin: 16px 0 0;
+        padding: 0 10px;
+        border: 1px solid #dedede;
+        font-size: 16px;
+        color: #626262;
+
+        &:focus {
+          border: 2px solid #626262;
+          color: #626262;
+        }
+      }
+      .saveCheckboxes {
+        display: flex;
+
+        .saveCheckbox {
+          display: flex;
+          align-items: center;
+          width: 200px;
+
+          .contents {
+            display: block;
+            padding: 0;
+          }
+          label {
+            display: inline-block;
+            width: 100%;
+            margin: 0;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  .nobodyInfo {
+    width: 100%;
+    max-width: 592px;
+    margin: 20px 0 10px;
+    padding: 20px 15px;
+    background-color: #fcf8e3;
+    border-color: 1px solid #faebcc;
+    border-radius: 4px;
+    color: #8a6d3b;
+    font-size: 14px;
+
+    span {
+      display: inline-block;
+      margin: 14px 4px 6px;
+      font-weight: 600;
+    }
+    p {
+      margin: 4px;
+    }
+  }
+}

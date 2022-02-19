@@ -1,0 +1,47 @@
+{
+  "result": [
+    {
+      "id": 1,
+      "name": "가벼운 S 쿠키 구독",
+      "introduction": "쿠키가 일상이 되는 가벼운 시작",
+      "image": [
+        "https://user-images.githubusercontent.com/46774456/112266922-0b83f300-8cb8-11eb-9e4c-2fa60755b834.png",
+        "https://user-images.githubusercontent.com/46774456/112266898-032bb800-8cb8-11eb-8faa-115276adc745.png",
+        "https://user-images.githubusercontent.com/46774456/112266905-058e1200-8cb8-11eb-80aa-ae807a1b3bed.png",
+        "https://user-images.githubusercontent.com/46774456/112266909-0757d580-8cb8-11eb-8306-8da6ac54d897.png",
+        "https://user-images.githubusercontent.com/46774456/112266913-08890280-8cb8-11eb-8b4c-c5c8583229ee.png"
+      ],
+      "description": "2주에 한 번, 쿠키가 일상이 되는 가벼운 시작\n작지만 그 계절 가장 맛있는 재료로 만들었어요.\n나에게, 사랑하는 사람에게 작은 쿠키세트가 주는 행복을 전해보세요.",
+      "price": "17900"
+    },
+    {
+      "id": 2,
+      "name": "딱 좋은 M 쿠키구독",
+      "introduction": "배가 든든한 쿠키의 시작",
+      "image": [
+        "https://user-images.githubusercontent.com/46774456/112266972-19397880-8cb8-11eb-9a88-200e3594b9b3.png",
+
+        "https://user-images.githubusercontent.com/46774456/112266898-032bb800-8cb8-11eb-8faa-115276adc745.png",
+        "https://user-images.githubusercontent.com/46774456/112266905-058e1200-8cb8-11eb-80aa-ae807a1b3bed.png",
+        "https://user-images.githubusercontent.com/46774456/112266909-0757d580-8cb8-11eb-8306-8da6ac54d897.png",
+        "https://user-images.githubusercontent.com/46774456/112266913-08890280-8cb8-11eb-8b4c-c5c8583229ee.png"
+      ],
+      "description": "2주에 한 번, 쿠키가 일상이 되는 가벼운 시작\n작지만 그 계절 가장 맛있는 재료로 만들었어요.\n나에게, 사랑하는 사람에게 쿠키꾸러미가 주는 행복을 전해보세요.",
+      "price": "26900"
+    },
+    {
+      "id": 3,
+      "name": "풍성한 L 쿠키구독",
+      "introduction": "매일이 달콤함이 풍성지는 일상의 행복",
+      "image": [
+        "https://user-images.githubusercontent.com/46774456/112266945-10e13d80-8cb8-11eb-841f-b3d2661cad3e.png",
+        "https://user-images.githubusercontent.com/46774456/112266898-032bb800-8cb8-11eb-8faa-115276adc745.png",
+        "https://user-images.githubusercontent.com/46774456/112266905-058e1200-8cb8-11eb-80aa-ae807a1b3bed.png",
+        "https://user-images.githubusercontent.com/46774456/112266909-0757d580-8cb8-11eb-8306-8da6ac54d897.png",
+        "https://user-images.githubusercontent.com/46774456/112266913-08890280-8cb8-11eb-8b4c-c5c8583229ee.png"
+      ],
+      "description": "2주에 한 번, 매일이 풍성해지는 일상의 행복\n두 손에 꽉 차는 쿠키꾸러미로 그 계절 가장 맛있는 재료로 만들었어요.\n하루가 더욱 풍성해지는 행복을 느껴보세요.",
+      "price": "34900"
+    }
+  ]
+}

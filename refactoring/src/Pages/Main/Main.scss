@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+
+.main {
+  font-family: "Noto Sans KR";
+  .container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .subNav {
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 100vw;
+      height: 550px;
+      margin: 0 auto 0;
+      .subNavImg {
+        width: 100vw;
+        height: 550px;
+        background-color: #ffd141;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .cookieSubscribeList {
+    max-width: 1240px;
+    margin: 50px auto;
+    padding: 40px 60px;
+
+    .subscribeTxt {
+      padding: 40px 0 20px 0;
+      font-size: 30px;
+
+      .subscribeBold {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .subscribeItemBox {
+    display: flex;
+  }
+
+  .cookieListBox {
+    width: 100%;
+    background-color: #f7f7f7;
+
+    .cookieList {
+      margin: 0 auto;
+      padding: 40px 60px;
+      height: 950px;
+      max-width: 1240px;
+      background-color: #f7f7f7;
+
+      .cookieListTxt {
+        display: flex;
+        justify-content: space-between;
+        padding: 50px 0 20px 0;
+
+        .cookieTxt {
+          display: inline-flex;
+          font-size: 30px;
+
+          .cookieBold {
+            font-weight: bold;
+          }
+        }
+
+        .moreBtn {
+          margin-right: 20px;
+          border: none;
+          background-color: transparent;
+          outline: none;
+        }
+      }
+
+      .cookieDataItems {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        min-width: 85%;
+      }
+    }
+  }
+}

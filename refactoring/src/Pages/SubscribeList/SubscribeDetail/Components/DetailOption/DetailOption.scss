@@ -1,0 +1,282 @@
+%title {
+  font-size: 26px;
+  line-height: 38px;
+  font-weight: 500;
+  letter-spacing: -0.39px;
+  color: #222;
+}
+
+%contents {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  letter-spacing: -0.24px;
+  color: #222;
+}
+
+%subContents {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 100;
+  letter-spacing: -0.21px;
+  color: #222;
+}
+
+.detailOption {
+  margin-top: 17px;
+  padding-top: 17px;
+  border-top: 1px solid #ececec;
+
+  .subscribeOption {
+    width: 100%;
+
+    table {
+      width: 100%;
+      margin-bottom: 30px;
+      table-layout: fixed;
+
+      .optionTh1 {
+        width: 150px;
+      }
+
+      th {
+        text-align: left;
+      }
+
+      .optionRow1 {
+        height: 70px;
+
+        select {
+          width: 100%;
+          height: 46px;
+          padding: 0 50px 0 20px;
+          border-radius: 5px;
+          border: 1px solid #ffcd32;
+          background: url(https://farm1.staticflickr.com/379/19928272501_4ef877c265_t.jpg)
+            no-repeat 95% 50%;
+          font-size: 14px;
+          line-height: 46px;
+          font-weight: 300;
+          letter-spacing: -0.21px;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+
+          &:hover {
+            border-color: #ffcd32;
+          }
+
+          &:focus {
+            border-color: #ffcd32;
+            color: #222;
+            outline: #ffcd32;
+          }
+
+          &:disabled {
+            opacity: 0.5;
+          }
+
+          .option {
+            width: 100%;
+            height: 42px;
+            margin: 0;
+            border: none;
+            outline: 0;
+            background-color: transparent;
+            cursor: pointer;
+            z-index: 1;
+          }
+        }
+
+        input {
+          width: 100%;
+          height: 46px;
+          margin: 10px 0 20px;
+          padding: 0 20px 0 20px;
+          border-radius: 5px;
+          border: 1px solid #ffcd32;
+          font-size: 14px;
+          line-height: 46px;
+          font-weight: 300;
+          letter-spacing: -0.21px;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+
+          &:hover {
+            border-color: #ffcd32;
+          }
+
+          &:focus {
+            border-color: #ffcd32;
+            color: #222;
+            outline: #ffcd32;
+          }
+        }
+      }
+
+      .optionRow2 {
+        height: 50px;
+
+        .detailAmount {
+          .btnAmount {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            border: none;
+            background-color: #ececec;
+            cursor: pointer;
+          }
+
+          span {
+            margin: 0 12px;
+          }
+        }
+      }
+
+      .optionRow3 {
+        height: 50px;
+
+        .letterCheckboxes {
+          display: flex;
+
+          .letterCheckbox {
+            display: block;
+
+            &:not(:last-child) {
+              margin-right: 20px;
+            }
+
+            input {
+              margin-right: 4px;
+
+              .checked {
+                color: #ffcd32;
+              }
+            }
+
+            .contents {
+              @extend %contents;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.detailPrice,
+.letterPrice {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 490px;
+  height: 82px;
+  margin: 10px 0 20px;
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+  color: #0d0d0d;
+
+  .contents {
+    @extend %contents;
+  }
+
+  .price::after {
+    content: "원";
+  }
+
+  .subContents {
+    @extend %subContents;
+  }
+
+  .letterBox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    .deleteBtn {
+      display: flex;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      margin-top: 4px;
+      border: 1px solid #0d0d0d;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  }
+}
+
+.totalPrice {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: 490px;
+  height: 82px;
+  margin: 20px 0;
+  padding: 20px;
+  border: none;
+  color: #0d0d0d;
+
+  .shippingFree {
+    display: block;
+    height: 20px;
+    margin-bottom: 10px;
+    padding: 0 8px;
+    border-radius: 10px;
+    border: 1px solid #ececec;
+    background-color: #ececec;
+    font-size: 9px;
+    line-height: 18px;
+    font-weight: 300px;
+    letter-spacing: -0.14px;
+  }
+
+  div {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    .subContents {
+      display: inline-block;
+      @extend %subContents;
+      line-height: 30px;
+    }
+
+    .title {
+      display: inline-block;
+      @extend %title;
+      margin-left: 10px;
+    }
+
+    .price::after {
+      content: "원";
+    }
+  }
+}
+
+.detailButtons {
+  display: flex;
+
+  .detailBtn {
+    display: block;
+    width: 240px;
+    height: 48px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffcd32;
+    color: #0d0d0d;
+    font-weight: 300;
+    letter-spacing: -0.21px;
+    cursor: pointer;
+  }
+
+  .cart {
+    background-color: #ececec;
+  }
+}

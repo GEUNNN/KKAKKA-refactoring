@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+
+%upperFont {
+  font-size: 40px;
+  font-weight: 1000;
+}
+
+.congratsupperBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 550px;
+  padding-top: 80px;
+  background-color: #ffcd32;
+  font-family: "Noto Sans KR";
+
+  .textBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .nameTxt {
+      @extend %upperFont;
+      color: black;
+    }
+
+    .congratTxt {
+      @extend %upperFont;
+      font-weight: bold;
+      color: white;
+    }
+
+    .couponImage {
+      margin: 50px 0 50px 0;
+      height: 300px;
+    }
+  }
+}
+
+.congratslowerBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 30px 0 100px 0;
+  font-family: "Noto Sans KR";
+
+  .promoteTxt {
+    font-size: 18px;
+    font-weight: 800;
+    margin: 20px 0 20px 0;
+  }
+
+  .emailTxt {
+    font-size: 15px;
+    color: #888;
+  }
+
+  .shoppingBtn {
+    width: 350px;
+    height: 48px;
+    border: 1px solid #ffcd32;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 50px;
+    background-color: transparent;
+  }
+}

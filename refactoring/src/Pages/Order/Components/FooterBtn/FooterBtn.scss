@@ -1,0 +1,25 @@
+.letterFooter {
+  margin-top: 30px;
+  padding: 0 35px;
+
+  .letterBtns {
+    text-align: right;
+
+    .letterBtn {
+      display: inline-block;
+      width: 234px;
+      height: 50px;
+      margin-left: 12px;
+      border: 1px solid #434343;
+      background-color: #fff;
+      color: #626262;
+      font-size: 16px;
+      cursor: pointer;
+
+      &.next {
+        background-color: #3a3a3a;
+        color: #fff;
+      }
+    }
+  }
+}
