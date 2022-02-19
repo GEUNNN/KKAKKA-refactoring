@@ -25,7 +25,8 @@ class Login extends Component {
   };
 
   goToMain = e => {
-    const regExpression = /^([0-9a-zA-Z_\.-]+)@([0-9a-zA-Z_-]+)(\.[0-9a-zA-Z_-]+){1,12}$/i;
+    const regExpression =
+      /^([0-9a-zA-Z_\.-]+)@([0-9a-zA-Z_-]+)(\.[0-9a-zA-Z_-]+){1,12}$/i;
 
     if (
       regExpression.test(this.state.email) &&
