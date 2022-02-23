@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Main from "./Pages/Main/Main.js";
 import Login from "./Pages/Login/Login.js";
 import Cart from "./Pages/Cart/Cart.js";
@@ -20,32 +20,26 @@ class Routes extends React.Component {
   render() {
     return (
       <Router>
-        <Switch>
-          <Route exact path="/main" component={Main} />
-          <Route exact path="/login" component={Login} />
-          <Route exact path="/cart" component={Cart} />
-          <Route
-            exact
-            path="/flower-class-detail"
-            component={FlowerClassDetail}
-          />
-          <Route exact path="/flower-class-list" component={FlowerClassList} />
-          <Route exact path="/product/:id" component={FlowerDetail} />
-          <Route exact path="/product" component={FlowerList} />
-          <Route exact path="/event" component={Event} />
-          <Route exact path="/mypage" component={Mypage} />
-          <Route exact path="/order/subscription/:id" component={Order} />
-          <Route exact path="/order" component={Order} />
-          <Route exact path="/order-list" component={OrderList} />
-          <Route exact path="/signup" component={SignUp} />
-          <Route exact path="/subscription/:id" component={SubscribeDetail} />
-          <Route exact path="/subscription" component={SubscribeList} />
-          <Route
-            exact
-            path="/signup-congratulation"
-            component={Congratulation}
-          />
-        </Switch>
+        <Route exact path="/main" component={Main} />
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/cart" component={Cart} />
+        <Route
+          exact
+          path="/flower-class-detail"
+          component={FlowerClassDetail}
+        />
+        <Route exact path="/flower-class-list" component={FlowerClassList} />
+        <Route exact path="/product/:id" component={FlowerDetail} />
+        <Route exact path="/product" component={FlowerList} />
+        <Route exact path="/event" component={Event} />
+        <Route exact path="/mypage" component={Mypage} />
+        <Route exact path="/order/subscription/:id" component={Order} />
+        <Route exact path="/order" component={Order} />
+        <Route exact path="/order-list" component={OrderList} />
+        <Route exact path="/signup" component={SignUp} />
+        <Route exact path="/subscription/:id" component={SubscribeDetail} />
+        <Route exact path="/subscription" component={SubscribeList} />
+        <Route exact path="/signup-congratulation" component={Congratulation} />
       </Router>
     );
   }
