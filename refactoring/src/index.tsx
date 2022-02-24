@@ -1,6 +1,6 @@
-import React, { StrictMode } from "react";
+import { StrictMode } from "react";
 import ReactDOM from "react-dom";
-import { Routes } from "./Routes.tsx";
+import { Routes } from "./Routes";
 
 import "./styles/common.scss";
 import "./styles/reset.scss";
