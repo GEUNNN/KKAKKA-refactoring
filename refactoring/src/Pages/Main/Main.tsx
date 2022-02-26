@@ -16,10 +16,10 @@ export function Main(): React.ReactElement {
 
   useEffect(() => {}, []);
   return (
-    <div>
+    <main className="main">
       <p>hello world</p>
       안뇽
-    </div>
+    </main>
   );
 }
 
@@ -44,7 +44,7 @@ class Mainn extends Component {
   };
 
   render() {
-    const { cookieSubscribe, cookieData } = this.state;
+    // const { cookieSubscribe, cookieData } = this.state;
     return (
       <div className="main">
         <div className="container">
