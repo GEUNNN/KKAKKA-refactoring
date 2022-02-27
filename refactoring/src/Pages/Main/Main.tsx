@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+import axios from "axios";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Nav from "../../Components/Nav/Nav";
@@ -8,17 +10,26 @@ import { mainSubscribeAPI, productMainAPI } from "../../config";
 // import { mockCookieDataAPI, mockCookieSubscribeAPI } from "../../config";
 import "../../styles/common.scss";
 import "./Main.scss";
-import { useState, useEffect } from "react";
 
 export function Main(): React.ReactElement {
   const [cookieSubscribe, setCookieSubscribe] = useState([]);
   const [cookieData, setCookieData] = useState([]);
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    const data = axios.get("http://localhost:3000/data/cookieData.json");
+  }, []);
   return (
     <main className="main">
-      <p>hello world</p>
-      안뇽
+      <div className="navContainer">
+        <Nav />
+        <div className="subNav">
+          <img
+            alt="main"
+            src="https://kukka-2-media-123.s3.amazonaws.com/media/ckeditor_uploads/2021/02/26/pc_001.png"
+            className="subNavImg"
+          />
+        </div>
+      </div>
     </main>
   );
 }
@@ -47,7 +58,7 @@ class Mainn extends Component {
     // const { cookieSubscribe, cookieData } = this.state;
     return (
       <div className="main">
-        <div className="container">
+        <div className="navContainer">
           <Nav />
           <div className="subNav">
             <img
@@ -63,7 +74,7 @@ class Mainn extends Component {
               2주에 한번, 나를 위한 작은 행복 까까{" "}
               <span className="subscribeBold">쿠키 정기구독</span>
             </h2>
-            <div class="subscribeItemBox">
+            <div className="subscribeItemBox">
               {cookieSubscribe?.map(subscribeList => {
                 return (
                   <Cards
