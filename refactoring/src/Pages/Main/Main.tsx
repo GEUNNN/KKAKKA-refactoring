@@ -12,8 +12,8 @@ import "../../styles/common.scss";
 import "./Main.scss";
 
 export function Main(): React.ReactElement {
-  const [cookieSubscribe, setCookieSubscribe] = useState([]);
-  const [cookieData, setCookieData] = useState([]);
+  const [cookieSubscribe, setCookieSubscribe] = useState<string[]>([]);
+  const [cookieData, setCookieData] = useState<string[]>([]);
 
   useEffect(() => {
     const data = axios.get("http://localhost:3000/data/cookieData.json");
