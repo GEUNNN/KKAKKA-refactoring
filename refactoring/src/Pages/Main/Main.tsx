@@ -31,23 +31,22 @@ export function Main(): React.ReactElement {
 
   useEffect(() => {
     const data = axios.get("http://localhost:3000/data/cookieData.json");
-    data.then(res => console.log("response >>", res.data));
+    data.then(res => setCookieData(res?.data));
   }, []);
-
-  console.log(cookieData);
 
   return (
     <main className="main">
       <div className="navContainer">
         <Nav />
-        <div className="subNav">
+        <div className="mainIMG">
           <img
             alt="main"
             src="https://kukka-2-media-123.s3.amazonaws.com/media/ckeditor_uploads/2021/02/26/pc_001.png"
-            className="subNavImg"
+            className="mainIMG"
           />
         </div>
       </div>
+      <Footer />
     </main>
   );
 }
