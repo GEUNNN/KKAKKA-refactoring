@@ -27,11 +27,11 @@ export interface CookieItem {
 
 export function Main(): React.ReactElement {
   const [cookieSubscribe, setCookieSubscribe] = useState<string[]>([]);
-  const [cookieData, setCookieData] = useState<string[]>([]);
+  const [cookieData, setCookieData] = useState<CookieItem[]>([]);
 
   useEffect(() => {
     const data = axios.get("http://localhost:3000/data/cookieData.json");
-    data.then(res => setCookieData(res?.data));
+    data.then(res => setCookieData(res?.data?.product_list));
   }, []);
 
   return (
@@ -45,6 +45,21 @@ export function Main(): React.ReactElement {
             className="mainIMG"
           />
         </div>
+      </div>
+      <div className="cookieDataItems">
+        {cookieData.map(cookieDataList => {
+          return (
+            <DataList
+              key={cookieDataList.id}
+              cookieName={cookieDataList.name}
+              cookieIntro={cookieDataList.introduction}
+              cookieImg={cookieDataList.image}
+              cookiePrice={cookieDataList.orign_price}
+              cookieDiscountRate={cookieDataList.discount_rate}
+              cookieDiscountPrice={cookieDataList.discounted_price}
+            />
+          );
+        })}
       </div>
       <Footer />
     </main>
@@ -75,16 +90,6 @@ export function Main(): React.ReactElement {
 //     // const { cookieSubscribe, cookieData } = this.state;
 //     return (
 //       <div className="main">
-//         <div className="navContainer">
-//           <Nav />
-//           <div className="subNav">
-//             <img
-//               alt="main"
-//               src="https://kukka-2-media-123.s3.amazonaws.com/media/ckeditor_uploads/2021/02/26/pc_001.png"
-//               className="subNavImg"
-//             />
-//           </div>
-//         </div>
 //         <div className="subscribeList">
 //           <div className="cookieSubscribeList">
 //             <h2 className="subscribeTxt">
