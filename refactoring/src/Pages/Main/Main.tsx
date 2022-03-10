@@ -25,7 +25,7 @@ export interface CookieItem {
   discounted_price: string;
 }
 
-export function Main(): React.ReactElement {
+export function Main(): JSX.Element {
   const [cookieSubscribe, setCookieSubscribe] = useState<string[]>([]);
   const [cookieData, setCookieData] = useState<CookieItem[]>([]);
 
@@ -51,12 +51,12 @@ export function Main(): React.ReactElement {
           return (
             <DataList
               key={cookieDataList.id}
-              cookieName={cookieDataList.name}
-              cookieIntro={cookieDataList.introduction}
-              cookieImg={cookieDataList.image}
-              cookiePrice={cookieDataList.orign_price}
-              cookieDiscountRate={cookieDataList.discount_rate}
-              cookieDiscountPrice={cookieDataList.discounted_price}
+              name={cookieDataList.name}
+              description={cookieDataList.introduction}
+              image={cookieDataList.image}
+              price={cookieDataList.orign_price}
+              discountRate={cookieDataList.discount_rate}
+              discountPrice={cookieDataList.discounted_price}
             />
           );
         })}
