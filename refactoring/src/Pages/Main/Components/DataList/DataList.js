@@ -5,7 +5,7 @@ export class DataList extends Component {
   render() {
     const {
       cookieIntro,
-      cookieName,
+      name,
       cookiePrice,
       cookieDiscountPrice,
       cookieDiscountRate,
@@ -15,7 +15,7 @@ export class DataList extends Component {
       <div className="dataList">
         <img src={this.props.cookieImg} className="cookieImg" alt="product" />
         <p className="cookieIntro">{this.props.cookieIntro}</p>
-        <p className="cookieName">{this.props.cookieName}</p>
+        <p className="cookieName">{this.props.name}</p>
         <div className="priceBox">
           {cookieDiscountRate > 0.0 && (
             <span className="cookieDiscountRate">{`${

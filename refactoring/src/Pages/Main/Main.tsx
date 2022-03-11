@@ -1,13 +1,12 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Nav from "../../Components/Nav/Nav";
 import Footer from "../../Components/Footer/Footer";
 import Cards from "./Components/Cards/Cards";
 import DataList from "./Components/DataList/DataList";
-import { mainSubscribeAPI, productMainAPI } from "../../config";
-// import { mockCookieDataAPI, mockCookieSubscribeAPI } from "../../config";
+// import { mainSubscribeAPI, productMainAPI } from "../../config";
+import { mockCookieItemsAPI, mockCookieSubscribeAPI } from "../../config";
 import "../../styles/common.scss";
 import "./Main.scss";
 
@@ -30,7 +29,12 @@ export function Main(): JSX.Element {
   const [cookieData, setCookieData] = useState<CookieItem[]>([]);
 
   useEffect(() => {
-    const data = axios.get("http://localhost:3000/data/cookieData.json");
+    const data = axios.get(mockCookieSubscribeAPI);
+    data.then(res => setCookieSubscribe(res?.data?.product_list));
+  }, []);
+
+  useEffect(() => {
+    const data = axios.get(mockCookieItemsAPI);
     data.then(res => setCookieData(res?.data?.product_list));
   }, []);
 
@@ -38,15 +42,15 @@ export function Main(): JSX.Element {
     <main className="main">
       <div className="navContainer">
         <Nav />
-        <div className="mainIMG">
+        <div className="mainImg">
           <img
             alt="main"
             src="https://kukka-2-media-123.s3.amazonaws.com/media/ckeditor_uploads/2021/02/26/pc_001.png"
-            className="mainIMG"
+            className="mainImg"
           />
         </div>
       </div>
-      <div className="cookieDataItems">
+      <div className="CookieItemsContainer">
         {cookieData.map(cookieDataList => {
           return (
             <DataList
