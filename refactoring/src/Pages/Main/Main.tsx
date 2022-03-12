@@ -24,8 +24,16 @@ export interface CookieItem {
   discounted_price: string;
 }
 
+export interface subscribeItem {
+  id: number;
+  name: string;
+  introduction: string;
+  image: string;
+  price: string;
+}
+
 export function Main(): JSX.Element {
-  const [cookieSubscribe, setCookieSubscribe] = useState<string[]>([]);
+  const [cookieSubscribe, setCookieSubscribe] = useState<subscribeItem[]>([]);
   const [cookieData, setCookieData] = useState<CookieItem[]>([]);
 
   useEffect(() => {
@@ -50,6 +58,28 @@ export function Main(): JSX.Element {
           />
         </div>
       </div>
+      <div className="subscribeList">
+        <div className="cookieSubscribeList">
+          <h2 className="subscribeTxt">
+            2주에 한번, 나를 위한 작은 행복 까까{" "}
+            <span className="subscribeBold">쿠키 정기구독</span>
+          </h2>
+          <div className="subscribeItemBox">
+            {cookieSubscribe?.map(subscribeList => {
+              return (
+                <Cards
+                  key={subscribeList.id}
+                  subscribeName={subscribeList.name}
+                  subscribeIntro={subscribeList.introduction}
+                  subscribeImg={subscribeList.image}
+                  subscribePrice={subscribeList.price}
+                />
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
       <div className="CookieItemsContainer">
         {cookieData.map(cookieDataList => {
           return (
@@ -94,26 +124,26 @@ export function Main(): JSX.Element {
 //     // const { cookieSubscribe, cookieData } = this.state;
 //     return (
 //       <div className="main">
-//         <div className="subscribeList">
-//           <div className="cookieSubscribeList">
-//             <h2 className="subscribeTxt">
-//               2주에 한번, 나를 위한 작은 행복 까까{" "}
-//               <span className="subscribeBold">쿠키 정기구독</span>
-//             </h2>
-//             <div className="subscribeItemBox">
-//               {cookieSubscribe?.map(subscribeList => {
-//                 return (
-//                   <Cards
-//                     key={subscribeList.id}
-//                     subscribeName={subscribeList.name}
-//                     subscribeIntro={subscribeList.introduction}
-//                     subscribeImg={subscribeList.image}
-//                     subscribePrice={subscribeList.price}
-//                   />
-//                 );
-//               })}
-//             </div>
-//           </div>
+// <div className="subscribeList">
+//   <div className="cookieSubscribeList">
+//     <h2 className="subscribeTxt">
+//       2주에 한번, 나를 위한 작은 행복 까까{" "}
+//       <span className="subscribeBold">쿠키 정기구독</span>
+//     </h2>
+//     <div className="subscribeItemBox">
+//       {cookieSubscribe?.map(subscribeList => {
+//         return (
+//           <Cards
+//             key={subscribeList.id}
+//             subscribeName={subscribeList.name}
+//             subscribeIntro={subscribeList.introduction}
+//             subscribeImg={subscribeList.image}
+//             subscribePrice={subscribeList.price}
+//           />
+//         );
+//       })}
+//     </div>
+//   </div>
 
 //           <div className="cookieListBox">
 //             <div className="cookieList">
