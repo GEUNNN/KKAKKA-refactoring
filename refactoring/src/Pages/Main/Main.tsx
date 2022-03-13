@@ -24,7 +24,7 @@ export interface CookieItem {
   discounted_price: string;
 }
 
-export interface subscribeItem {
+export interface SubscribeItem {
   id: number;
   name: string;
   introduction: string;
@@ -33,12 +33,12 @@ export interface subscribeItem {
 }
 
 export function Main(): JSX.Element {
-  const [cookieSubscribe, setCookieSubscribe] = useState<subscribeItem[]>([]);
+  const [cookieSubscribe, setCookieSubscribe] = useState<SubscribeItem[]>([]);
   const [cookieData, setCookieData] = useState<CookieItem[]>([]);
 
   useEffect(() => {
     const data = axios.get(mockCookieSubscribeAPI);
-    data.then(res => setCookieSubscribe(res?.data?.product_list));
+    data.then(res => setCookieSubscribe(res?.data?.result));
   }, []);
 
   useEffect(() => {
@@ -65,14 +65,14 @@ export function Main(): JSX.Element {
             <span className="subscribeBold">쿠키 정기구독</span>
           </h2>
           <div className="subscribeItemBox">
-            {cookieSubscribe?.map(subscribeList => {
+            {cookieSubscribe?.map(subscribeItem => {
               return (
                 <Cards
-                  key={subscribeList.id}
-                  subscribeName={subscribeList.name}
-                  subscribeIntro={subscribeList.introduction}
-                  subscribeImg={subscribeList.image}
-                  subscribePrice={subscribeList.price}
+                  key={subscribeItem.id}
+                  name={subscribeItem.name}
+                  description={subscribeItem.introduction}
+                  image={subscribeItem.image}
+                  price={subscribeItem.price}
                 />
               );
             })}
