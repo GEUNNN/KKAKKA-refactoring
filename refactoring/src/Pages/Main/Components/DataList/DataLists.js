@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./DataList.scss";
 
-export class DataList extends Component {
+export class DataLists extends Component {
   render() {
     const {
       cookieIntro,

@@ -1,13 +1,12 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { mockCookieItemsAPI, mockCookieSubscribeAPI } from "../../config";
 import Nav from "../../Components/Nav/Nav";
 import Footer from "../../Components/Footer/Footer";
-
-import DataList from "./Components/DataList/DataList";
-import { mockCookieItemsAPI, mockCookieSubscribeAPI } from "../../config";
+import { Cards } from "./Components/Cards/Cards";
+import { DataList } from "./Components/DataList/DataList";
 import "../../styles/common.scss";
 import "./Main.scss";
-import { Cards } from "./Components/Cards/Cards";
 
 export interface CookieResData {
   product_list: CookieItem[];
@@ -83,13 +82,13 @@ export function Main(): JSX.Element {
         {cookieData.map(cookieDataList => {
           return (
             <DataList
-              key={cookieDataList.id}
-              name={cookieDataList.name}
-              description={cookieDataList.introduction}
-              image={cookieDataList.image}
-              price={cookieDataList.orign_price}
-              discountRate={cookieDataList.discount_rate}
-              discountPrice={cookieDataList.discounted_price}
+            // key={cookieDataList.id}
+            // name={cookieDataList.name}
+            // description={cookieDataList.introduction}
+            // image={cookieDataList.image}
+            // price={cookieDataList.orign_price}
+            // discountRate={cookieDataList.discount_rate}
+            // discountPrice={cookieDataList.discounted_price}
             />
           );
         })}
