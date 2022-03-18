@@ -1,7 +1,23 @@
 import React, { Component } from "react";
 import "./DataList.scss";
 
-export function DataList(): JSX.Element {
+export interface DataListProps {
+  name: string;
+  description: string;
+  image: string;
+  price: string;
+  discountRate?: number;
+  discountPrice?: string | undefined;
+}
+
+export function DataList({
+  name,
+  description,
+  image,
+  price,
+  discountRate,
+  discountPrice,
+}: DataListProps): JSX.Element {
   return <div>DataList</div>;
 }
 

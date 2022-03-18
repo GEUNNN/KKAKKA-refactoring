@@ -82,13 +82,13 @@ export function Main(): JSX.Element {
         {cookieData.map(cookieDataList => {
           return (
             <DataList
-            // key={cookieDataList.id}
-            // name={cookieDataList.name}
-            // description={cookieDataList.introduction}
-            // image={cookieDataList.image}
-            // price={cookieDataList.orign_price}
-            // discountRate={cookieDataList.discount_rate}
-            // discountPrice={cookieDataList.discounted_price}
+              key={cookieDataList.id}
+              name={cookieDataList.name}
+              description={cookieDataList.introduction}
+              image={cookieDataList.image}
+              price={cookieDataList.orign_price}
+              discountRate={cookieDataList.discount_rate}
+              discountPrice={cookieDataList.discounted_price}
             />
           );
         })}
