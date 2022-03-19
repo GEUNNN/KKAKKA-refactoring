@@ -6,7 +6,7 @@
       "detail": "핑크빛 분위기의 완성",
       "orign_price": "59900",
       "discount_rate": 0.1,
-      "discounted_price": "53900",
+      "discounted_price": 53900,
       "created_at": "2021-03-25T00:16:15.095",
       "image": [
         "https://user-images.githubusercontent.com/46774456/112266972-19397880-8cb8-11eb-9a88-200e3594b9b3.png",
@@ -23,7 +23,7 @@
       "detail": "마음을 간질이는 설렘",
       "orign_price": "42900",
       "discount_rate": 0.1,
-      "discounted_price": "37900",
+      "discounted_price": 37900,
       "created_at": "2021-03-25T00:18:38.186",
       "image": [
         "https://user-images.githubusercontent.com/46774456/112266945-10e13d80-8cb8-11eb-841f-b3d2661cad3e.png",
@@ -40,7 +40,7 @@
       "detail": "알록달록한 매력",
       "orign_price": "33900",
       "discount_rate": 0.1,
-      "discounted_price": "29900",
+      "discounted_price": 29900,
       "created_at": "2021-03-25T00:20:05.368",
       "image": [
         "https://user-images.githubusercontent.com/46774456/112266905-058e1200-8cb8-11eb-80aa-ae807a1b3bed.png",
@@ -57,7 +57,7 @@
       "detail": "생기 가득한 봄의 색감",
       "orign_price": "22900",
       "discount_rate": 0.1,
-      "discounted_price": "19900",
+      "discounted_price": 19900,
       "created_at": "2021-03-25T00:22:07.465",
       "image": [
         "https://user-images.githubusercontent.com/46774456/112266934-0f177a00-8cb8-11eb-96b3-6af0e0966709.png",

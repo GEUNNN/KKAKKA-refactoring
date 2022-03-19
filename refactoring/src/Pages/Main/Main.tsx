@@ -27,7 +27,7 @@ export interface SubscribeItem {
   name: string;
   introduction: string;
   image: string;
-  price: string;
+  price: number;
 }
 
 export function Main(): JSX.Element {
@@ -66,11 +66,11 @@ export function Main(): JSX.Element {
             {cookieSubscribe?.map(subscribeItem => {
               return (
                 <Cards
-                  key={subscribeItem.id}
-                  name={subscribeItem.name}
-                  description={subscribeItem.introduction}
-                  image={subscribeItem.image}
-                  price={subscribeItem.price}
+                  key={subscribeItem?.id}
+                  name={subscribeItem?.name}
+                  description={subscribeItem?.introduction}
+                  image={subscribeItem?.image}
+                  price={subscribeItem?.price}
                 />
               );
             })}
@@ -82,13 +82,13 @@ export function Main(): JSX.Element {
         {cookieData.map(cookieDataList => {
           return (
             <DataList
-              key={cookieDataList.id}
-              name={cookieDataList.name}
-              description={cookieDataList.introduction}
-              image={cookieDataList.image}
-              price={cookieDataList.orign_price}
-              discountRate={cookieDataList.discount_rate}
-              discountPrice={cookieDataList.discounted_price}
+              key={cookieDataList?.id}
+              name={cookieDataList?.name}
+              description={cookieDataList?.introduction}
+              image={cookieDataList?.image}
+              price={cookieDataList?.orign_price}
+              discountRate={cookieDataList?.discount_rate}
+              discountPrice={cookieDataList?.discounted_price}
             />
           );
         })}
