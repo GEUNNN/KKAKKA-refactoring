@@ -17,9 +17,9 @@ export interface CookieItem {
   name: string;
   introduction: string;
   image: string;
-  orign_price: string;
+  orign_price: number;
   discount_rate: number;
-  discounted_price: string;
+  discounted_price: number;
 }
 
 export interface SubscribeItem {
@@ -79,16 +79,16 @@ export function Main(): JSX.Element {
       </div>
 
       <div className="CookieItemsContainer">
-        {cookieData.map(cookieDataList => {
+        {cookieData.map(cookieDataItem => {
           return (
             <DataList
-              key={cookieDataList?.id}
-              name={cookieDataList?.name}
-              description={cookieDataList?.introduction}
-              image={cookieDataList?.image}
-              price={cookieDataList?.orign_price}
-              discountRate={cookieDataList?.discount_rate}
-              discountPrice={cookieDataList?.discounted_price}
+              key={cookieDataItem?.id}
+              name={cookieDataItem?.name}
+              description={cookieDataItem?.introduction}
+              image={cookieDataItem?.image}
+              price={cookieDataItem?.orign_price}
+              discountRate={cookieDataItem?.discount_rate}
+              discountedPrice={cookieDataItem?.discounted_price}
             />
           );
         })}

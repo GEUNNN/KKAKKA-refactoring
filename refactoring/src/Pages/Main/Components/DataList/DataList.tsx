@@ -5,8 +5,8 @@ export interface DataListProps {
   description: string;
   image: string;
   price: number;
-  discountRate?: number;
-  discountPrice?: number;
+  discountRate: number;
+  discountedPrice: number;
 }
 
 export function DataList({
@@ -15,7 +15,7 @@ export function DataList({
   image,
   price,
   discountRate,
-  discountPrice,
+  discountedPrice,
 }: DataListProps): JSX.Element {
   return (
     <div>
@@ -36,7 +36,7 @@ export function DataList({
             <span className="originalPrice">{`${price}`}원</span>
           )}
           {discountRate! > 0.0 && (
-            <span className="cookieDiscountPrice">{discountPrice}원</span>
+            <span className="cookieDiscountPrice">{discountedPrice}원</span>
           )}
         </div>
         <p className="freeShipping">무료배송</p>

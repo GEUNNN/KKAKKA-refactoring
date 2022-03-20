@@ -4,7 +4,7 @@ export interface CardsDataProps {
   name: string;
   description: string;
   image: string;
-  price: string;
+  price: number;
 }
 
 export function Cards({ name, description, image, price }: CardsDataProps) {
