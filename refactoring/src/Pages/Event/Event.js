@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ListDatas from "../FlowerList/ListDatas";
-import Footer from "../../Components/Footer/Footer";
+import { Footer } from "../../Components/Footer/Footer";
 import Nav from "../../Components/Nav/Nav";
 import SubNav from "../../Components/SubNav/SubNav";
 import "../FlowerList/FlowerList.scss";

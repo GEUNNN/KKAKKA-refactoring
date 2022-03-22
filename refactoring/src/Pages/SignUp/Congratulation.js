@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Nav from "../../Components/Nav/Nav";
-import Footer from "../../Components/Footer/Footer";
+import { Footer } from "../../Components/Footer/Footer";
 import "./Congratulation.scss";
 
 export class Congratulation extends Component {

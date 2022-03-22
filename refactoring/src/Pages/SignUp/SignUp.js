@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { withRouter } from "react-router";
 import { signupAPI } from "../../config";
 import Nav from "../../Components/Nav/Nav";
-import Footer from "../../Components/Footer/Footer";
+import { Footer } from "../../Components/Footer/Footer";
 import "./SignUp.scss";
 
 class SignUp extends Component {

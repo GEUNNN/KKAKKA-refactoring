@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { mockCookieItemsAPI, mockCookieSubscribeAPI } from "../../config";
 import Nav from "../../Components/Nav/Nav";
-import Footer from "../../Components/Footer/Footer";
+import { Footer } from "../../Components/Footer/Footer";
 import { Cards } from "./Components/Cards/Cards";
 import { DataList } from "./Components/DataList/DataList";
 import "../../styles/common.scss";

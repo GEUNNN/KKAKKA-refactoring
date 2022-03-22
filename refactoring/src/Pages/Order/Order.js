@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Nav from "../../Components/Nav/Nav";
-import Footer from "../../Components/Footer/Footer";
+import { Footer } from "../../Components/Footer/Footer";
 import OrderLetter from "./Components/OrderLetter/OrderLetter";
 import OrderAddress from "./Components/OrderAddress/OrderAddress";
 import OrderPay from "./Components/OrderPay/OrderPay";
