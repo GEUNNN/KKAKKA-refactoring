@@ -62,7 +62,7 @@ export function Main(): JSX.Element {
             2주에 한번, 나를 위한 작은 행복 까까
             <span className="subscribeBold">쿠키 정기구독</span>
           </h2>
-          <div className="subscribeItemBox">
+          <div className="subscribeContainer">
             {cookieSubscribe?.map(subscribeItem => {
               return (
                 <Cards
