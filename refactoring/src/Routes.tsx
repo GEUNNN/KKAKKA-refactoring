@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Main } from "./Pages/Main/Main";
-import Login from "./Pages/Login/Login.js";
+import { Login } from "./Pages/Login/Login";
 import Cart from "./Pages/Cart/Cart.js";
 import FlowerClassDetail from "./Pages/FlowerClassDetail/FlowerClassDetail.js";
 import FlowerClassList from "./Pages/FlowerClassList/FlowerClassList.js";
