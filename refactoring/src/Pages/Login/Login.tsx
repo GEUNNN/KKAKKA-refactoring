@@ -1,4 +1,4 @@
-import { withRouter } from "react-router";
+import { useHistory, withRouter } from "react-router";
 import { Link } from "react-router-dom";
 import Nav from "../../Components/Nav/Nav";
 import { Footer } from "../../Components/Footer/Footer";
@@ -6,7 +6,48 @@ import { loginAPI } from "../../config";
 import "./Login.scss";
 
 export function Login(): JSX.Element {
-  return <div>Login</div>;
+  return (
+    <div className="login">
+      <Nav />
+      <div className="loginBox">
+        <h1 className="loginText">로그인</h1>
+        <form className="loginField">
+          <input
+            className="id"
+            name="email"
+            type="email"
+            placeholder="아이디(이메일)"
+            autoComplete="off"
+            // onChange={this.handleInput}
+          />
+          <input
+            className="pwd"
+            name="password"
+            type="password"
+            placeholder="비밀번호"
+            // onChange={this.handleInput}
+          />
+          {/* {!isValid && (
+            <div className="validation">
+              <p>Email/비밀번호를 정확히 입력해주세요.</p>
+            </div>
+          )} */}
+          <div className="inputBtnBuffer"></div>
+          {/* <button className="loginBtn" onClick={this.goToMain}>
+            로그인
+          </button> */}
+          <div className="signUpArea">
+            <button className="signUpBtn">
+              <Link to="/signup" className="signUpLink">
+                회원가입
+              </Link>
+            </button>
+          </div>
+        </form>
+      </div>
+      <Footer />
+    </div>
+  );
 }
 
 // class Login extends Component {
@@ -68,48 +109,5 @@ export function Login(): JSX.Element {
 
 //   render() {
 //     const { isValid } = this.state;
-//     return (
-//       <div className="login">
-//         <Nav />
-//         <div className="loginBox">
-//           <h1 className="loginText">로그인</h1>
-//           <form className="loginField">
-//             <input
-//               className="id"
-//               name="email"
-//               type="email"
-//               placeholder="아이디(이메일)"
-//               autoComplete="off"
-//               onChange={this.handleInput}
-//             />
-//             <input
-//               className="pwd"
-//               name="password"
-//               type="password"
-//               placeholder="비밀번호"
-//               onChange={this.handleInput}
-//             />
-//             {!isValid && (
-//               <div className="validation">
-//                 <p>Email/비밀번호를 정확히 입력해주세요.</p>
-//               </div>
-//             )}
-//             <div className="inputBtnBuffer"></div>
-//             <button className="loginBtn" onClick={this.goToMain}>
-//               로그인
-//             </button>
-//             <div className="signUpArea">
-//               <button className="signUpBtn">
-//                 <Link to="/signup" className="signUpLink">
-//                   회원가입
-//                 </Link>
-//               </button>
-//             </div>
-//           </form>
-//         </div>
-//         <Footer />
-//       </div>
-//     );
-//   }
 // }
 // export default withRouter(Login);
