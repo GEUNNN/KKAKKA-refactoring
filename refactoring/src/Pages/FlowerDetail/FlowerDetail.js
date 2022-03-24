@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { config } from "../../config.js";
 import ProductInfo from "./Components/ProductInfo/ProductInfo";
 import ProductOption from "./Components/ProductOption/ProductOption";
-import Footer from "../../Components/Footer/Footer";
+import { Footer } from "../../Components/Footer/Footer";
 import Nav from "../../Components/Nav/Nav";
 import "./FlowerDetail.scss";
 

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { config } from "../../config.js";
 import Nav from "../../Components/Nav/Nav";
 import SubNav from "../../Components/SubNav/SubNav";
-import Footer from "../../Components/Footer/Footer";
+import { Footer } from "../../Components/Footer/Footer";
 import SubCard from "./SubCard/SubCard";
 import SubStart from "./SubStart/SubStart";
 import "./SubscribeList.scss";
