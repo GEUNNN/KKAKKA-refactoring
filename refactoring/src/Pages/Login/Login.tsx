@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useHistory, withRouter } from "react-router";
 import { Link } from "react-router-dom";
 import Nav from "../../Components/Nav/Nav";
@@ -6,6 +7,10 @@ import { loginAPI } from "../../config";
 import "./Login.scss";
 
 export function Login(): JSX.Element {
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const [isValid, setIsValid] = useState<boolean>(true);
+
   return (
     <div className="login">
       <Nav />
