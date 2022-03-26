@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { useHistory, withRouter } from "react-router";
 import { Link } from "react-router-dom";
 import Nav from "../../Components/Nav/Nav";
@@ -6,10 +6,24 @@ import { Footer } from "../../Components/Footer/Footer";
 import { loginAPI } from "../../config";
 import "./Login.scss";
 
+export interface UserInput {
+  [prop: string]: string;
+}
 export function Login(): JSX.Element {
-  const [email, setEmail] = useState<string>("");
-  const [password, setPassword] = useState<string>("");
+  const [userInput, setUserInput] = useState<UserInput>({
+    email: "",
+    password: "",
+  });
   const [isValid, setIsValid] = useState<boolean>(true);
+
+  const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    e.preventDefault();
+    const { name, value } = e.target;
+    console.log(e.target);
+    setUserInput({ ...userInput, [name]: value });
+  };
+
+  console.log(userInput);
 
   return (
     <div className="login">
@@ -23,20 +37,20 @@ export function Login(): JSX.Element {
             type="email"
             placeholder="아이디(이메일)"
             autoComplete="off"
-            // onChange={this.handleInput}
+            onChange={handleInput}
           />
           <input
             className="pwd"
             name="password"
             type="password"
             placeholder="비밀번호"
-            // onChange={this.handleInput}
+            onChange={handleInput}
           />
-          {/* {!isValid && (
+          {!isValid && (
             <div className="validation">
               <p>Email/비밀번호를 정확히 입력해주세요.</p>
             </div>
-          )} */}
+          )}
           <div className="inputBtnBuffer"></div>
           {/* <button className="loginBtn" onClick={this.goToMain}>
             로그인
@@ -56,22 +70,6 @@ export function Login(): JSX.Element {
 }
 
 // class Login extends Component {
-//   constructor() {
-//     super();
-//     this.state = {
-//       email: "",
-//       password: "",
-//       isValid: true,
-//     };
-//   }
-
-//   handleInput = e => {
-//     e.preventDefault();
-//     const { name, value } = e.target;
-//     this.setState({
-//       [name]: value,
-//     });
-//   };
 
 //   goToMain = e => {
 //     const regExpression =
@@ -112,7 +110,4 @@ export function Login(): JSX.Element {
 //     e.preventDefault();
 //   };
 
-//   render() {
-//     const { isValid } = this.state;
-// }
 // export default withRouter(Login);
