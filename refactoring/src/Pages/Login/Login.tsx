@@ -25,6 +25,40 @@ export function Login(): JSX.Element {
 
   console.log(userInput);
 
+  const goToMain = (e: React.ChangeEvent) => {
+    const regExpression =
+      /^([0-9a-zA-Z_\.-]+)@([0-9a-zA-Z_-]+)(\.[0-9a-zA-Z_-]+){1,12}$/i;
+
+    if (regExpression.test(userInput.email) && userInput.password.length >= 8) {
+      fetch(loginAPI, {
+        method: "POST",
+        body: JSON.stringify({
+          id: userInput.email,
+          password: userInput.password,
+        }),
+      })
+        .then(response => response.json())
+        .then(response => {
+          console.log(response);
+          if (response.message === "success_signin") {
+            // this.props.history.push("/main");
+          } else if (response.message === "error_password_matching") {
+            alert("비밀번호를 다시 입력해주세요");
+          } else if (response.message === "error_mutiple_id" || "error_no_id") {
+            alert("아이디(이메일)를 다시 입력해주세요");
+          }
+        })
+        .then((response: any) => {
+          if (response.access_token) {
+            sessionStorage.setItem("token", response.access_token);
+          }
+        });
+    } else {
+      setIsValid(false);
+    }
+    e.preventDefault();
+  };
+
   return (
     <div className="login">
       <Nav />
@@ -71,43 +105,43 @@ export function Login(): JSX.Element {
 
 // class Login extends Component {
 
-//   goToMain = e => {
-//     const regExpression =
-//       /^([0-9a-zA-Z_\.-]+)@([0-9a-zA-Z_-]+)(\.[0-9a-zA-Z_-]+){1,12}$/i;
+// goToMain = e => {
+//   const regExpression =
+//     /^([0-9a-zA-Z_\.-]+)@([0-9a-zA-Z_-]+)(\.[0-9a-zA-Z_-]+){1,12}$/i;
 
-//     if (
-//       regExpression.test(this.state.email) &&
-//       this.state.password.length >= 8
-//     ) {
-//       fetch(loginAPI, {
-//         method: "POST",
-//         body: JSON.stringify({
-//           id: this.state.email,
-//           password: this.state.password,
-//         }),
+//   if (
+//     regExpression.test(this.state.email) &&
+//     this.state.password.length >= 8
+//   ) {
+//     fetch(loginAPI, {
+//       method: "POST",
+//       body: JSON.stringify({
+//         id: this.state.email,
+//         password: this.state.password,
+//       }),
+//     })
+//       .then(response => response.json())
+//       .then(response => {
+//         console.log(response);
+//         if (response.message === "success_signin") {
+//           this.props.history.push("/main");
+//         } else if (response.message === "error_password_matching") {
+//           alert("비밀번호를 다시 입력해주세요");
+//         } else if (response.message === "error_mutiple_id" || "error_no_id") {
+//           alert("아이디(이메일)를 다시 입력해주세요");
+//         }
 //       })
-//         .then(response => response.json())
-//         .then(response => {
-//           console.log(response);
-//           if (response.message === "success_signin") {
-//             this.props.history.push("/main");
-//           } else if (response.message === "error_password_matching") {
-//             alert("비밀번호를 다시 입력해주세요");
-//           } else if (response.message === "error_mutiple_id" || "error_no_id") {
-//             alert("아이디(이메일)를 다시 입력해주세요");
-//           }
-//         })
-//         .then(response => {
-//           if (response.access_token) {
-//             sessionStorage.setItem("token", response.access_token);
-//           }
-//         });
-//     } else {
-//       this.setState({
-//         isValid: false,
+//       .then(response => {
+//         if (response.access_token) {
+//           sessionStorage.setItem("token", response.access_token);
+//         }
 //       });
-//     }
-//     e.preventDefault();
-//   };
+//   } else {
+//     this.setState({
+//       isValid: false,
+//     });
+//   }
+//   e.preventDefault();
+// };
 
 // export default withRouter(Login);
