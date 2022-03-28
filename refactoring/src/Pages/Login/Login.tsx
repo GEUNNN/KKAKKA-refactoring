@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { useHistory, withRouter } from "react-router";
+import { useHistory } from "react-router";
 import { Link } from "react-router-dom";
 import Nav from "../../Components/Nav/Nav";
 import { Footer } from "../../Components/Footer/Footer";
 import { loginAPI } from "../../config";
 import "./Login.scss";
+import axios from "axios";
 
 export interface UserInput {
   [prop: string]: string;
@@ -15,6 +16,7 @@ export function Login(): JSX.Element {
     password: "",
   });
   const [isValid, setIsValid] = useState<boolean>(true);
+  // const history = useHistory();
 
   const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
@@ -30,15 +32,12 @@ export function Login(): JSX.Element {
       /^([0-9a-zA-Z_\.-]+)@([0-9a-zA-Z_-]+)(\.[0-9a-zA-Z_-]+){1,12}$/i;
 
     if (regExpression.test(userInput.email) && userInput.password.length >= 8) {
-      fetch(loginAPI, {
-        method: "POST",
-        body: JSON.stringify({
+      axios
+        .post(loginAPI, {
           id: userInput.email,
           password: userInput.password,
-        }),
-      })
-        .then(response => response.json())
-        .then(response => {
+        })
+        .then((response: any) => {
           console.log(response);
           if (response.message === "success_signin") {
             // this.props.history.push("/main");
