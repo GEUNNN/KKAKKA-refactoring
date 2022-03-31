@@ -6,8 +6,15 @@ import "./SubDetailCard.scss";
 
 class SubDetailCard extends Component {
   render() {
-    const { id, introduction, name, price, description, image, subscribeData } =
-      this.props;
+    const {
+      id,
+      introduction,
+      name,
+      price,
+      description,
+      image,
+      subscribeData,
+    } = this.props;
 
     return (
       <section className="detailContainer">

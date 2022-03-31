@@ -37,10 +37,19 @@ class DetailOption extends Component {
   };
 
   render() {
-    const { subscribeOption, quantity, delivery_date, hasLetter } =
-      this.props.subscribeData;
-    const { changeCount, chkHasLetter, changeDate, price, changeSubOption } =
-      this.props;
+    const {
+      subscribeOption,
+      quantity,
+      delivery_date,
+      hasLetter,
+    } = this.props.subscribeData;
+    const {
+      changeCount,
+      chkHasLetter,
+      changeDate,
+      price,
+      changeSubOption,
+    } = this.props;
     return (
       <div>
         {this.state.modal && (

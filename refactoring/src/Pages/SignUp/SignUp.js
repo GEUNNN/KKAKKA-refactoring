@@ -58,8 +58,7 @@ class SignUp extends Component {
 
   //이메일 유효성 검사 후 state값을 바꾸는 함수
   emailValidCheck = () => {
-    const regExpression =
-      /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+    const regExpression = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
 
     if (!regExpression.test(this.state.email)) {
       this.setState({
@@ -94,8 +93,12 @@ class SignUp extends Component {
 
   // onClick시 실행할 모든 검사 함수
   validCheck = () => {
-    const { isEmailvalid, isPwdInputValid, isPwdLengthValid, inputFillPass } =
-      this.state;
+    const {
+      isEmailvalid,
+      isPwdInputValid,
+      isPwdLengthValid,
+      inputFillPass,
+    } = this.state;
 
     this.emailValidCheck();
     this.pwdInputCheck();
@@ -107,8 +110,12 @@ class SignUp extends Component {
   };
 
   render() {
-    const { isEmailvalid, isPwdInputValid, isPwdLengthValid, inputFillPass } =
-      this.state;
+    const {
+      isEmailvalid,
+      isPwdInputValid,
+      isPwdLengthValid,
+      inputFillPass,
+    } = this.state;
     return (
       <div className="signUp">
         <Nav />

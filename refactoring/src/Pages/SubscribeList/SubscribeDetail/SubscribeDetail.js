@@ -151,8 +151,14 @@ class SubscribeDetail extends Component {
   };
 
   render() {
-    const { id, introduction, name, price, description, image } =
-      this.state.subscribeList;
+    const {
+      id,
+      introduction,
+      name,
+      price,
+      description,
+      image,
+    } = this.state.subscribeList;
     return (
       <>
         <Nav />

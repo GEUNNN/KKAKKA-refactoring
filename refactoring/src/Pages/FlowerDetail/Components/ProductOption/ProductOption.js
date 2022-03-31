@@ -35,8 +35,12 @@ class ProductOption extends Component {
   };
 
   render() {
-    const { discounted_price, chkHasLetter, changeDate, changeCount } =
-      this.props;
+    const {
+      discounted_price,
+      chkHasLetter,
+      changeDate,
+      changeCount,
+    } = this.props;
     const { quantity, delivery_date, hasLetter } = this.props.productData;
 
     return (
