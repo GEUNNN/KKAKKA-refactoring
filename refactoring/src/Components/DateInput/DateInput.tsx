@@ -4,23 +4,26 @@ import "react-datepicker/dist/react-datepicker.css";
 import "./DateInput.scss";
 
 export interface DateInputProps {
-  startDate: string;
+  startDate: Date;
+  changeDate: (date: Date | null) => void;
 }
 
-export function DateInput(): JSX.Element {
+export function DateInput({
+  startDate,
+  changeDate,
+}: DateInputProps): JSX.Element {
   return (
     <form className="inputDeliveryDate">
       <DatePicker
         id="datePicker"
         locale={ko}
         name="day1"
-        // selected={this.props.startDate}
+        selected={startDate}
         closeOnScroll={true}
         minDate={new Date()}
         // popperModifiers={{ preventOverflow: { enabled: true } }}
-        onChange={(date, event) => {
-          console.log(date);
-          // this.props.changeDate(date, event);
+        onChange={date => {
+          changeDate(date);
         }}
         placeholderText="수령일을 선택해주세요."
         dateFormat="eeee, yyyy-MM-dd"

@@ -82,7 +82,7 @@ class FlowerDetail extends Component {
     });
   };
 
-  changeDate = (date, event) => {
+  changeDate = date => {
     let updateDate = {
       ...this.state.productData,
       delivery_date: date,
